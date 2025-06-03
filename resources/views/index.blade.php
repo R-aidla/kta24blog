@@ -5,11 +5,11 @@
     <div class="text-center my-2">
         {{ $posts->links() }}
     </div>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 gap-4">
         @foreach($posts as $post)
             <div class="card card-side bg-base-300 shadow-sm">
                 <figure class="min-w-3xs">
-                    <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" alt="Movie" />
+                    <img src="https://www.bvdia.com/wp-content/uploads/2025/05/superimage.png" alt="Artwork" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">{{$post->title}}</h2>
@@ -20,5 +20,8 @@
                 </div>
             </div>
         @endforeach
+    </div>
+    <div class="text-center my-2">
+        {{ $posts->links('partials/simple-pagination') }} {{-- You asked for a simple pagination reskin. You got it. I did also reskin some other things but ¯\_(ツ)_/¯ --}}
     </div>
 @endsection
